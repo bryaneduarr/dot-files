@@ -17,6 +17,9 @@ return {
     telescope.setup({
       -- ignore folders/files
       pickers = {
+        colorscheme = {
+          enable_preview = true,
+        },
         live_grep = {
           vimgrep_arguments = {
             "rg",
@@ -58,7 +61,7 @@ return {
         mappings = {
           i = {
             ["<C-k>"] = actions.move_selection_previous, -- move to prev result
-            ["<C-j>"] = actions.move_selection_next, -- move to next result
+            ["<C-j>"] = actions.move_selection_next,     -- move to next result
             ["<C-t>"] = trouble_telescope.open,
           },
         },

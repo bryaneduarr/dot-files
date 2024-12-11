@@ -8,6 +8,9 @@ return {
     require("codeium").setup({
       virtual_text = {
         enabled = true,
+        filetypes = {
+          markdown = false,
+        },
       },
     })
   end,
