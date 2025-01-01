@@ -15,55 +15,29 @@ return {
     local trouble_telescope = require("trouble.sources.telescope")
 
     telescope.setup({
-      -- ignore folders/files
-      pickers = {
-        colorscheme = {
-          enable_preview = true,
-        },
-        live_grep = {
-          vimgrep_arguments = {
-            "rg",
-            "--color=never",
-            "--no-heading",
-            "--with-filename",
-            "--line-number",
-            "--column",
-            "--smart-case",
-            "--ignore",
-            "--hidden",
-            "-g",
-            "!.git/",
-            "-g",
-            "!node_modules/",
-            "-g",
-            "!package-lock.json",
-            -- Ignore Obsidian vault files
-            "-g",
-            "!.obsidian/",
-            "-g",
-            "!.obsidian.vimrc",
-            "-g",
-            "!.smart-env/",
-            "-g",
-            "!assets/",
-            "-g",
-            "!books/",
-            "-g",
-            "!templates/",
-          },
-        },
-      },
-    })
-
-    telescope.setup({
       defaults = {
         path_display = { "smart" },
+        file_ignore_patterns = {
+          "%.git/",
+          "node_modules/",
+          "%.next/",
+          "package%-lock%.json",
+          "%.obsidian/",
+          "%.obsidian.vimrc",
+          "%.smart%-env/",
+          "templates/",
+        },
         mappings = {
           i = {
             ["<C-k>"] = actions.move_selection_previous, -- move to prev result
-            ["<C-j>"] = actions.move_selection_next,     -- move to next result
+            ["<C-j>"] = actions.move_selection_next, -- move to next result
             ["<C-t>"] = trouble_telescope.open,
           },
+        },
+      },
+      pickers = {
+        colorscheme = {
+          enable_preview = true,
         },
       },
     })

@@ -34,8 +34,8 @@ return {
     -- Optional, configure additional syntax highlighting / extmarks.
     -- This requires you have `conceallevel` set to 1 or 2. See `:help conceallevel` for more details.
     ui = {
-      enable = true,          -- set to false to disable all additional syntax features
-      update_debounce = 200,  -- update delay after a text change (in milliseconds)
+      enable = true, -- set to false to disable all additional syntax features
+      update_debounce = 200, -- update delay after a text change (in milliseconds)
       max_file_length = 5000, -- disable UI features for files with more than this many lines
       -- Define how various check-boxes are displayed
       checkboxes = {
@@ -79,9 +79,14 @@ return {
       return spec.dir / (spec.id .. ".md")
     end,
     templates = {
-      date_format = "%Y-%m-%d-%a",
+      date_format = "%Y-%m-%d",
       time_format = "%H:%M",
       folder = "templates",
+      substitutions = {
+        day = function()
+          return os.date("%a")
+        end,
+      },
     },
     attachments = {
       -- The default folder to place images in via `:ObsidianPasteImg`.
