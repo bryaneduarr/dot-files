@@ -13,15 +13,10 @@ o.splitright = true
 o.splitbelow = true
 o.termguicolors = true
 
--- Python route for VENV
-vim.g.python3_host_prog = "~/.venv/nvim/bin/python3"
-
 -- Change identation tab spaces
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
-
-vim.opt.ttimeoutlen = 0
 
 -- Function to show VCS status git signs.
 _G.vcs_status = function()
@@ -50,19 +45,6 @@ _G.vcs_status = function()
     git_info.head,
   })
 end
-
--- Show relative path when writing a file.
-vim.opt.shortmess:append("F")
-
--- Show relative path when accessing nvim as it's directory is home directory "~"
-vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
-  callback = function()
-    -- Check if the current buffer represents a real file
-    if vim.fn.filereadable(vim.fn.expand("%:p")) == 1 then
-      vim.cmd("lcd " .. vim.fn.expand("%:p:h"))
-    end
-  end,
-})
 
 -- Status line
 vim.opt.statusline = "%f %h%m%r%= %{v:lua.vcs_status()} %l:%c"

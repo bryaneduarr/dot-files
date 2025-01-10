@@ -4,8 +4,8 @@ return {
     keymaps = {
       ["g?"] = "actions.show_help",
       ["<CR>"] = "actions.select",
-      ["<C-M-s>"] = { "actions.select", opts = { vertical = true }, desc = "Open the entry in a vertical split" },
-      ["<C-d>"] = {
+      ["<leader>["] = { "actions.select", opts = { vertical = true }, desc = "Open the entry in a vertical split" },
+      ["<leader>]"] = {
         "actions.select",
         opts = { horizontal = true },
         desc = "Open the entry in a horizontal split",
@@ -24,6 +24,7 @@ return {
       ["g\\"] = "actions.toggle_trash",
     },
     use_default_keymaps = false,
+    skip_confirm_for_simple_edits = true,
     view_options = {
       show_hidden = true,
       -- This function defines what is considered a "hidden" file

@@ -30,8 +30,12 @@ return {
         mappings = {
           i = {
             ["<C-k>"] = actions.move_selection_previous, -- move to prev result
-            ["<C-j>"] = actions.move_selection_next, -- move to next result
+            ["<C-j>"] = actions.move_selection_next,     -- move to next result
             ["<C-t>"] = trouble_telescope.open,
+            ["<c-d>"] = require("telescope.actions").delete_buffer,
+          },
+          n = {
+            ["<c-d>"] = require("telescope.actions").delete_buffer,
           },
         },
       },
