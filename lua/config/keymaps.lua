@@ -38,7 +38,7 @@ vim.keymap.set("n", "<S-k>", "ddkP", { noremap = true, silent = true, desc = "Mo
 vim.keymap.set("n", "<S-j>", "ddp", { noremap = true, silent = true, desc = "Move line down in normal mode." })
 
 -- open nvim tree
-vim.keymap.set("n", "<leader>e", ":NeoTree<CR>", { noremap = true, silent = true, desc = "Toggle neo-tree plugin." })
+vim.keymap.set("n", "<leader>e", ":Neotree<CR>", { noremap = true, silent = true, desc = "Toggle neo-tree plugin." })
 
 -- copy outside editor
 vim.keymap.set("v", "<S-y>", '"+y', { noremap = true, silent = true, desc = "Copy line to system clipboard." })
