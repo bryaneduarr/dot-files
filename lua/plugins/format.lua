@@ -22,9 +22,9 @@ return {
       mason_tool_installer.setup({
         ensure_installed = {
           "prettier", -- prettier formatter
-          "stylua",   -- lua formatter
-          "isort",    -- python formatter
-          "black",    -- python formatter
+          "stylua", -- lua formatter
+          "isort", -- python formatter
+          "black", -- python formatter
           "pylint",
           "eslint_d",
         },
@@ -46,6 +46,7 @@ return {
           "tailwindcss",
           "ts_ls",
           "eslint",
+          "marksman",
           "html",
           "jsonls",
           "pyright",
@@ -60,7 +61,7 @@ return {
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
       { "antosha417/nvim-lsp-file-operations", config = true },
-      { "folke/neodev.nvim",                   opts = {} },
+      { "folke/neodev.nvim", opts = {} },
     },
     config = function()
       -- import lspconfig plugin
@@ -191,6 +192,12 @@ return {
 
         ["pylsp"] = function()
           lspconfig["pylsp"].setup({
+            capabilities = capabilities,
+          })
+        end,
+
+        ["marksman"] = function()
+          lspconfig["marksman"].setup({
             capabilities = capabilities,
           })
         end,

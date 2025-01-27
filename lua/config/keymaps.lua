@@ -8,7 +8,7 @@ vim.keymap.set("n", "<leader>q", ":q<CR>", {})
 vim.keymap.set("n", "<leader>bq", ":bp<bar>sp<bar>bn<bar>bd<CR>", { desc = "Close current buffer/tab" })
 
 -- close all buffers/tab
-vim.keymap.set("n", "<leader>baq", ":w | %bd | e#", { desc = "Close all buffers/tab" })
+vim.keymap.set("n", "<leader>baq", ":w | %bd | e# | bd#<CR>", { desc = "Close all buffers/tab" })
 
 -- oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })

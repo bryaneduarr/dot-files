@@ -5,14 +5,14 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme("catppuccin-mocha")
+      -- vim.cmd.colorscheme("catppuccin-mocha")
     end,
   },
   {
     "Mofiqul/vscode.nvim",
     name = "vscode",
     config = function()
-      -- vim.cmd("colorscheme vscode")
+      vim.cmd("colorscheme vscode")
     end,
   },
 }
