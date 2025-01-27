@@ -18,6 +18,9 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
+-- Cursor line
+vim.opt.cursorline = true
+
 -- Function to show VCS status git signs.
 _G.vcs_status = function()
   local git_info = vim.b.gitsigns_status_dict
