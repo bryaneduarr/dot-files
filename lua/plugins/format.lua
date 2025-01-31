@@ -46,7 +46,6 @@ return {
           "tailwindcss",
           "ts_ls",
           "eslint",
-          "marksman",
           "html",
           "jsonls",
           "pyright",
@@ -192,12 +191,6 @@ return {
 
         ["pylsp"] = function()
           lspconfig["pylsp"].setup({
-            capabilities = capabilities,
-          })
-        end,
-
-        ["marksman"] = function()
-          lspconfig["marksman"].setup({
             capabilities = capabilities,
           })
         end,

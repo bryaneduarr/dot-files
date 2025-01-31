@@ -12,7 +12,7 @@ return {
     "Mofiqul/vscode.nvim",
     name = "vscode",
     config = function()
-      vim.cmd("colorscheme vscode")
+      -- vim.cmd("colorscheme vscode")
     end,
   },
   {
@@ -59,5 +59,11 @@ return {
     config = function()
       -- vim.cmd.colorscheme("modus-vivendi")
     end,
+  },
+  {
+    "dgox16/oldworld.nvim",
+    lazy = false,
+    priority = 1000,
+    vim.cmd.colorscheme("oldworld"),
   },
 }
