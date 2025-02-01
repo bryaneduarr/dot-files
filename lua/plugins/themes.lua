@@ -64,6 +64,8 @@ return {
     "dgox16/oldworld.nvim",
     lazy = false,
     priority = 1000,
-    vim.cmd.colorscheme("oldworld"),
+    config = function()
+      vim.cmd.colorscheme("oldworld")
+    end,
   },
 }
