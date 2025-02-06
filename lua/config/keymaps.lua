@@ -47,3 +47,6 @@ vim.keymap.set(
 
 -- copy outside editor
 vim.keymap.set("v", "<S-y>", '"+y', { noremap = true, silent = true, desc = "Copy line to system clipboard." })
+
+-- obsidian open templates
+vim.keymap.set("n", "<leader>it", ":ObsidianTemplate<CR>", { desc = "Insert Obsidian Template" })

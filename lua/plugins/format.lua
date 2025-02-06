@@ -40,6 +40,7 @@ return {
     },
     config = function()
       require("mason-lspconfig").setup({
+        automatic_installation = true,
         ensure_installed = {
           "lua_ls",
           "cssls",
@@ -49,6 +50,7 @@ return {
           "html",
           "jsonls",
           "pyright",
+          "biome",
         },
       })
     end,
@@ -191,6 +193,12 @@ return {
 
         ["pylsp"] = function()
           lspconfig["pylsp"].setup({
+            capabilities = capabilities,
+          })
+        end,
+
+        ["biome"] = function()
+          lspconfig["biome"].setup({
             capabilities = capabilities,
           })
         end,
