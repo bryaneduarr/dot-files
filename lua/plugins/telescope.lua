@@ -11,10 +11,6 @@ return {
   config = function()
     local telescope = require("telescope")
     local actions = require("telescope.actions")
-    local transform_mod = require("telescope.actions.mt").transform_mod
-
-    local trouble = require("trouble")
-    local trouble_telescope = require("trouble.sources.telescope")
 
     -- Define obsidian-specific ignore settings
     local obsidian_ignore_directory = vim.g.OBSIDIAN_NOTES
@@ -51,7 +47,6 @@ return {
           i = {
             ["<C-k>"] = actions.move_selection_previous, -- move to prev result
             ["<C-j>"] = actions.move_selection_next,     -- move to next result
-            ["<C-t>"] = trouble_telescope.open,
             ["<c-d>"] = actions.delete_buffer,
           },
           n = {
@@ -72,10 +67,11 @@ return {
     local keymap = vim.keymap
 
     keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
-    keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Fuzzy find recent files" })
-    keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find string in cwd" })
-    keymap.set("n", "<leader>fs", "<cmd>Telescope git_status<cr>", { desc = "Find string under cursor in cwd" })
+    keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Fuzzy find string in cwd" })
+    keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find opened buffers" })
+    keymap.set("n", "<leader>fs", "<cmd>Telescope git_status<cr>", { desc = "Fuzzy find git status." })
     keymap.set("n", "<leader>fc", "<cmd>Telescope git commits<cr>", { desc = "Find todos" })
-    keymap.set("n", "<leader>fr", ":Telescope oldfiles <CR>", { desc = "Recently open files / old files." })
+    keymap.set("n", "<leader>fr", ":Telescope oldfiles<cr>", { desc = "Recently open files / old files." })
+    keymap.set("n", "<leader>f?", ":Telescope keymaps<cr>", { desc = "Find keymaps" })
   end,
 }

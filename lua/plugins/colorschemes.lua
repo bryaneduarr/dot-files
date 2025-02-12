@@ -22,7 +22,7 @@ return {
     name = "oldworld",
     config = function()
       require("oldworld").setup({
-        variant = "cooler",
+        variant = "oled",
       })
       vim.cmd.colorscheme("oldworld")
     end,

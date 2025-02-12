@@ -18,10 +18,10 @@ vim.keymap.set("n", "<leader>v", ":vsplit<CR>", { desc = "Split vertically the w
 vim.keymap.set("n", "<leader>s", ":split<CR>", { desc = "Split horizontal the window" })
 
 -- Navigate vim panes better
-vim.keymap.set("n", "<leader>k", ":wincmd k<CR>")
-vim.keymap.set("n", "<leader>j", ":wincmd j<CR>")
-vim.keymap.set("n", "<leader>h", ":wincmd h<CR>")
-vim.keymap.set("n", "<leader>l", ":wincmd l<CR>")
+vim.keymap.set("n", "<leader>k", ":wincmd k<CR>", { desc = "Move to top pane" })
+vim.keymap.set("n", "<leader>j", ":wincmd j<CR>", { desc = "Move to bottom pane" })
+vim.keymap.set("n", "<leader>h", ":wincmd h<CR>", { desc = "Move to left pane" })
+vim.keymap.set("n", "<leader>l", ":wincmd l<CR>", { desc = "Move to right pane" })
 
 -- Change between buffers
 vim.keymap.set("n", "<c-l>", ":bnext<CR>", { noremap = true, silent = true, desc = "Change to next buffer" })
@@ -36,14 +36,6 @@ vim.keymap.set("i", "<C-l>", "<Right>", { noremap = true, silent = true, desc = 
 -- move line up and down in normal mode
 vim.keymap.set("n", "<S-k>", "ddkP", { noremap = true, silent = true, desc = "Move line up in normal mode." })
 vim.keymap.set("n", "<S-j>", "ddp", { noremap = true, silent = true, desc = "Move line down in normal mode." })
-
--- open nvim tree
-vim.keymap.set(
-  "n",
-  "<leader>e",
-  ":Neotree toggle<CR>",
-  { noremap = true, silent = true, desc = "Toggle neo-tree plugin." }
-)
 
 -- copy outside editor
 vim.keymap.set("v", "<S-y>", '"+y', { noremap = true, silent = true, desc = "Copy line to system clipboard." })
