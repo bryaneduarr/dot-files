@@ -4,7 +4,7 @@ return {
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },
-    { "folke/neodev.nvim",                   opts = {} },
+    { "folke/neodev.nvim", opts = {} },
   },
   config = function()
     -- import lspconfig plugin
@@ -14,7 +14,7 @@ return {
     local mason_lspconfig = require("mason-lspconfig")
 
     -- import cmp-nvim-lsp plugin
-    local cmp_nvim_lsp = require("blink.cmp")
+    local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
     -- for conciseness
     local keymap = vim.keymap
@@ -69,7 +69,7 @@ return {
     })
 
     -- used to enable autocompletion (assign to every lsp server config)
-    local capabilities = require("blink.cmp").get_lsp_capabilities()
+    local capabilities = cmp_nvim_lsp.default_capabilities()
 
     -- Change the Diagnostic symbols in the sign column (gutter)
     -- (not in youtube nvim video)

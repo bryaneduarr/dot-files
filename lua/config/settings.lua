@@ -21,6 +21,33 @@ vim.opt.expandtab = true
 -- Cursor line
 vim.opt.cursorline = true
 
+-- Spelling
+vim.opt.spell = true
+vim.opt.spelllang = { "es", "en" }
+
+-- Set up folding for Markdown files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.opt_local.foldmethod = "expr"
+    vim.opt_local.foldexpr = "nvim_treesitter#foldexpr()"
+    vim.opt_local.foldenable = true
+  end,
+})
+
+-- Automatically save and restore folds
+vim.api.nvim_create_autocmd("BufWinLeave", {
+  pattern = "*.md",
+  command = "silent! mkview",
+})
+
+vim.api.nvim_create_autocmd("BufWinEnter", {
+  pattern = "*.md",
+  command = "silent! loadview",
+})
+
+vim.opt.viewoptions:append("folds")
+
 -- Function to show VCS status git signs.
 _G.vcs_status = function()
   local git_info = vim.b.gitsigns_status_dict
