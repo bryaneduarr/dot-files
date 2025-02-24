@@ -25,28 +25,32 @@ vim.opt.cursorline = true
 vim.opt.spell = true
 vim.opt.spelllang = { "es", "en" }
 
--- Set up folding for Markdown files
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "markdown",
-  callback = function()
-    vim.opt_local.foldmethod = "expr"
-    vim.opt_local.foldexpr = "nvim_treesitter#foldexpr()"
-    vim.opt_local.foldenable = true
-  end,
+vim.opt.viewoptions:append("folds")
+vim.opt.viewdir = os.getenv("HOME") .. "/.config/nvim/folds"
+
+local view_dir = vim.fn.expand(vim.opt.viewdir:get())
+if vim.fn.isdirectory(view_dir) == 0 then
+  vim.fn.mkdir(view_dir, "p")
+end
+
+vim.api.nvim_create_autocmd({ "BufWinLeave" }, {
+  pattern = { "*.md", "*.markdown" },
+  desc = "Save view folds when leaving markdown buffer.",
+  command = "mkview",
 })
 
--- Automatically save and restore folds
-vim.api.nvim_create_autocmd("BufWinLeave", {
-  pattern = "*.md",
-  command = "silent! mkview",
-})
-
-vim.api.nvim_create_autocmd("BufWinEnter", {
-  pattern = "*.md",
+vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
+  pattern = { "*.md", "*.markdown" },
+  desc = "Load view folds when entering markdown buffer.",
   command = "silent! loadview",
 })
 
-vim.opt.viewoptions:append("folds")
+-- Enable Tree-sitter-based folding
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- Set the default fold level
+vim.opt.foldlevel = 99
+vim.opt.foldenable = true
 
 -- Function to show VCS status git signs.
 _G.vcs_status = function()

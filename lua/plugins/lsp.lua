@@ -101,7 +101,7 @@ return {
 
       ["lua_ls"] = function()
         lspconfig["lua_ls"].setup({
-          capnbilities = capabilities,
+          capabilities = capabilities,
           settings = {
             Lua = {
               diagnostics = {
