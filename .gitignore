@@ -1,3 +1,38 @@
+# Personal folders
+workspace/
+environments/
+notes/
+
+# .config files
+.config/.wrangler/
+.config/simple-update-notifier/
+.config/nextjs-nodejs/
+.config/turborepo/
+
+# Default config folders
+.aws
+.azure
+.cache/
+.codeium/
+.docker/
+.dotnet/
+.landscape/
+.local/
+.npm/
+.nvm/
+.ssh/
+.tmux/
+.vscode-remote-containers/
+.vscode-server/
+.bash_logout
+.bashrc
+.gitignore
+.motd_shown
+.node_repl_history
+.viminfo
+.wget-hsts
+
+# For NeoVim
 .env
 lazy-lock.json
 lazyvim.json

@@ -1,0 +1,157 @@
+$nu.config-path
+cat config.nu
+cat $nu.config.nu
+$env.editor
+nvim
+clear
+echo $env.path
+bash
+echo $env.path
+config nu
+cd ~
+clear
+cd ./config
+cd ./.config
+cd nushell/
+vim config.nu
+vim env.nu
+clear
+vim ~/.config/nushell/env.nu
+$env.PATH
+clear
+nvim
+clear
+nu config
+config nu
+vim ~/.config/nushell/env.nu
+neovim ~/.config/nushell/env.nu
+neovim
+nvim ~/.config/nushell/env.nu
+clear
+nvim
+clear
+nvim ~/.config/nushell/env.nu
+confg nu
+config nu
+which gcc
+sudo apt update ; sudo apt upgrade -y ; sudo apt install build-essential -y
+$env.PATH
+config nu
+clear
+vim
+$env.PATH
+config nu
+cat
+config nu
+clear
+config nu
+vim
+vim ~/.config/nushell/env.nu
+nvim
+vim
+clear
+config nu
+clear
+config nu
+clear
+cd ~/.local/share/tmux/resurrect/
+ls
+clear
+ls
+clear
+cd ../nushell/
+clear
+ls
+cat history.txt
+clear
+sudo apt update ; sudo apt upgrade -y ; sudo apt install build-essential -y
+clear
+tmux
+nvim assignments.md
+clear
+nvim
+clear
+cd ~
+clear
+ls -la
+ls -la .bash_history
+clear
+cat .bash_history
+clear
+ls -la
+cat .bash_logout
+cat .bashrc
+clear
+ls -la
+ls -la .cache/nvim/catppuccin/frappe
+cat .cache/nvim/catppuccin/frappe
+clear
+ls -la
+ls -la .config
+ls -la .config/turborepo/
+cat .config/turborepo/telemetry.json
+cat .config/nextjs-nodejs/config.json
+cat .config/.wrangler/
+cat .config/.wrangler/metrics.json
+clear
+ls -la .config/
+ls -la
+ls -la .local
+ls -la .local/share/
+ls -la .local/share/nvim/
+ls -la .local/share/nvim/lazy/
+clear
+ls -la .local/share/nvim/lazy/
+ls -la .local/share/nvim/lazy/catppuccin/
+clear
+ls -la .local/share/nvim/
+ls -la .local/share/nvim/.netrwhist
+cat .local/share/nvim/.netrwhist
+cat .local/share/nvim/mason/
+ls -la .local/share/nvim/mason/
+ls -la .local/share/nvim/mason/share/
+ls -la .local/share/nvim/mason/share/mason-schemas/
+ls -la .local/share/nvim/mason/share/mason-schemas/lsp/
+clear
+ls -la .local/share/nvim/telescope_history
+cat .local/share/nvim/telescope_history
+nvim
+clear
+ls -la
+ls -la .profile
+cat.profile
+cat .profile
+clear
+ls -la
+cat .tmux/plugins/tmux-resurrect/resurrect.tmux
+clear
+cat .local/share/tmux/resurrect/last
+clear
+cat .local/share/tmux/resurrect/last
+cat .local/share/tmux/resurrect/tmux_resurrect_20250228T120856.txt
+clear
+nvim assignments.md
+clear
+nvim assignments.md
+clear
+git status
+clear
+nvim
+git push origin main
+git push origin master
+clear
+ls
+ls -la
+clear
+nvim .gitignore
+clear
+git clone https://github.com/bryaneduarr/nvim-config.git .
+mkdir delete
+cd delete
+git clone https://github.com/bryaneduarr/nvim-config.git .
+clear
+cd ..
+clear
+nvim
+brew install \ <\n>  git \<\n>  ripgrep \<\n>  gcc \<\n>  fzf \ ripgrep \<\n>  fd \ <\n>  unzip \ <\n>  luarocks \<\n>  tmux \<\n>  nvim
+clear
