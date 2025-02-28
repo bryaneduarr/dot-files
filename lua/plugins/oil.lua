@@ -1,6 +1,12 @@
 return {
   "stevearc/oil.nvim",
   opts = {
+    columns = {
+      -- "icon",
+      -- "permissions",
+      -- "size",
+      -- "mtime",
+    },
     skip_confirm_for_simple_edits = true,
     view_options = {
       show_hidden = true,

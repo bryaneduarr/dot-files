@@ -11,7 +11,8 @@ vim.keymap.set("n", "<leader>bq", ":bp<bar>sp<bar>bn<bar>bd<CR>", { desc = "Clos
 vim.keymap.set("n", "<leader>baq", ":w | %bd | e# | bd#<CR>", { desc = "Close all buffers/tab" })
 
 -- oil
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open Oil.nvim buffer." })
+-- vim.keymap.set("n", "-", "<CMD>Ex<CR>", { desc = "Open Explorer Netwr." })
 
 -- split window
 vim.keymap.set("n", "<leader>v", ":vsplit<CR>", { desc = "Split vertically the window" })

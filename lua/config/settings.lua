@@ -52,6 +52,11 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldlevel = 99
 vim.opt.foldenable = true
 
+-- Netrw
+-- vim.g.netrw_banner = 0
+-- vim.g.netrw_keepdir = 0
+-- vim.g.netrw_preview = 1
+
 -- Function to show VCS status git signs.
 _G.vcs_status = function()
   local git_info = vim.b.gitsigns_status_dict
