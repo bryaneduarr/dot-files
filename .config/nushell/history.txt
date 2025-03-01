@@ -155,3 +155,7 @@ clear
 nvim
 brew install \ <\n>  git \<\n>  ripgrep \<\n>  gcc \<\n>  fzf \ ripgrep \<\n>  fd \ <\n>  unzip \ <\n>  luarocks \<\n>  tmux \<\n>  nvim
 clear
+nvim README.md
+clear
+git push origin master
+clear

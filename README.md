@@ -204,8 +204,8 @@ Another plugin that uses the `.env` file is [nvim-telescope/telescope](https://g
 | ----------------------------------------- | ---------------------------------------------------------------------- | -------------------------------------------------------------- |
 | antosha417/nvim-lsp-file-operations       | [GitHub](https://github.com/antosha417/nvim-lsp-file-operations)       | [Config File](./.config/nvim/lua/plugins/lsp.lua)              |
 | catppuccin/nvim                           | [GitHub](https://github.com/catppuccin/nvim)                           | [Config File](./.config/nvim/lua/plugins/colorschemes.lua)     |
-| codeium.nvim                              | [GitHub](https://github.com/codeium.nvim)                              | [Config File](./.config/nvim/lua/plugins/codeium.lua)          |
-| dgox15/oldworld.nvim                      | [GitHub](https://github.com/dgox15/oldworld.nvim)                      | [Config File](./.config/nvim/lua/plugins/colorschemes.lua)     |
+| codeium.nvim                              | [GitHub](https://github.com/Exafunction/codeium.nvim)                  | [Config File](./.config/nvim/lua/plugins/codeium.lua)          |
+| dgox15/oldworld.nvim                      | [GitHub](https://github.com/dgox16/oldworld.nvim)                      | [Config File](./.config/nvim/lua/plugins/colorschemes.lua)     |
 | epwalsh/obsidian.nvim                     | [GitHub](https://github.com/epwalsh/obsidian.nvim)                     | [Config File](./.config/nvim/lua/plugins/obsidian.lua)         |
 | folke/neodev.nvim                         | [GitHub](https://github.com/folke/neodev.nvim)                         | [Config File](./.config/nvim/lua/plugins/lsp.lua)              |
 | folke/which-key.nvim                      | [GitHub](https://github.com/folke/which-key.nvim)                      | [Config File](./.config/nvim/lua/plugins/which-key.lua)        |
