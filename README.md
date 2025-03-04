@@ -120,7 +120,7 @@ sudo apt update ;sudo apt upgrade -y ; sudo apt install build-essential -y
 For the installation all the packages needed for this configuration we will be using [Homebrew](https://brew.sh/) to install them, you can just copy and paste the following command that includes all the dependencies:
 
 ```bash
-brew install git ripgrep gcc fzf ripgrep fd unzip luarocks tmux nvim
+brew install fd fzf git gcc luarocks nvim ripgrep tmux unzip
 ```
 
 ## NVM
@@ -218,6 +218,7 @@ Another plugin that uses the `.env` file is [nvim-telescope/telescope](https://g
 | lewis6991/gitsigns.nvim                   | [GitHub](https://github.com/lewis6991/gitsigns.nvim)                   | [Config File](./.config/nvim/lua/plugins/git-signs.lua)        |
 | L3MON4D3/LuaSnip                          | [GitHub](https://github.com/L3MON4D3/LuaSnip)                          | [Config File](./.config/nvim/lua/plugins/cmp.lua)              |
 | lukas-reineke/indent-blankline.nvim       | [GitHub](https://github.com/lukas-reineke/indent-blankline.nvim)       | [Config File](./.config/nvim/lua/plugins/indent-blankline.lua) |
+| MeanderingProgrammer/render-markdown.nvim | [GitHub](https://github.com/MeanderingProgrammer/render-markdown.nvim) | [Config File](./.config/nvim/lua/plugins/render-markdown.lua)  |
 | mfussenegger/nvim-lint                    | [GitHub](https://github.com/mfussenegger/nvim-lint)                    | [Config File](./.config/nvim/lua/plugins/lint.lua)             |
 | Mofiqul/vscode.nvim                       | [GitHub](https://github.com/Mofiqul/vscode.nvim)                       | [Config File](./.config/nvim/lua/plugins/colorschemes.lua)     |
 | neovim/nvim-lspconfig                     | [GitHub](https://github.com/neovim/nvim-lspconfig)                     | [Config File](./.config/nvim/lua/plugins/lsp.lua)              |

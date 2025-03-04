@@ -159,3 +159,98 @@ nvim README.md
 clear
 git push origin master
 clear
+nvim README.md
+git push origin master
+clear
+git pull
+clear
+ls -la
+clear
+git status
+nvim assignments.md
+clear
+nvim assignments.md
+clearea
+clear
+clear
+nvim assignments.md
+clear
+nvim assignments.md
+clear
+nvim
+clear
+tmux
+clear
+nvim
+clear
+nvim
+clear
+nvim
+clear
+nvim
+clear
+nvim
+clear
+nvim
+clar
+clear
+npm install -g yarn
+clear
+nvim README.md
+clear
+nvim
+clear
+nvim
+clear
+nvim
+clear
+nvim README.md
+clear
+nvim
+nvim README.md
+clear
+nvim README.md
+clear
+nvim
+clear
+nvim
+clear
+nvim assignments.md
+clear
+nvim
+nvim assignments.md
+clear
+nvim
+clear
+ls
+clear
+mv turbo-repo-tailwind-4-shadcn/ ../projects/
+clear
+cd ../turbo-repo-tailwind-4-shadcn/
+clear
+tmux
+cd ../projects/turbo-repo-tailwind-4-shadcn/
+clear
+cd ../projects/turbo-repo-tailwind-4-shadcn/
+clear
+pnpm run clean ; rm -rf pnpm-lock.yaml ; pnpm install ; pnpm run update ; pnpm run clean ; rm -rf pnpm-lock.yaml ; pnpm install ; pnpm run check-types ; pnpm run lint ; pnpm run format ; pnpm run build ; pnpm run dev
+pnpm install
+clear
+pnpm run clean ; rm -rf pnpm-lock.yaml ; pnpm install ; pnpm run update ; pnpm run clean ; rm -rf pnpm-lock.yaml ; pnpm install ; pnpm run check-types ; pnpm run lint ; pnpm run format ; pnpm run build ; pnpm run dev
+nvim
+clear
+nvim
+clear
+cd ../
+rm -rf turbo-repo-tailwind-4-shadcn/
+clear
+git clone https://github.com/bryaneduarr/turbo-repo-tailwind-4-shadcn
+clear
+cd turbo-repo-tailwind-4-shadcn/
+clear
+pnpm install
+clear
+nvim assignments.md
+clear
+git status
+clear
