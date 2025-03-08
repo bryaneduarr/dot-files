@@ -8,15 +8,19 @@ notes/
 .config/simple-update-notifier/
 .config/nextjs-nodejs/
 .config/turborepo/
+.config/configstore/
 
 # Default config folders
 .aws
+.bun/
 .azure
 .cache/
 .codeium/
 .docker/
 .dotnet/
 .landscape/
+.lesshst
+last
 .local/
 .npm/
 .nvm/

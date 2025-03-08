@@ -29,10 +29,11 @@ vim.keymap.set("n", "<c-l>", ":bnext<CR>", { noremap = true, silent = true, desc
 vim.keymap.set("n", "<c-h>", ":bprevious<CR>", { noremap = true, silent = true, desc = "Change to previous buffer." })
 
 -- while on insert move the cursor with hjkl and control
-vim.keymap.set("i", "<C-h>", "<Left>", { noremap = true, silent = true, desc = "Move to left while in insert mode" })
-vim.keymap.set("i", "<C-j>", "<Down>", { noremap = true, silent = true, desc = "Move to left while in insert mode" })
-vim.keymap.set("i", "<C-k>", "<Up>", { noremap = true, silent = true, desc = "Move to left while in insert mode" })
-vim.keymap.set("i", "<C-l>", "<Right>", { noremap = true, silent = true, desc = "Move to left while in insert mode" })
+-- Not longer needed for the current remap, if needed just uncomment.
+-- vim.keymap.set("i", "<C-h>", "<Left>", { noremap = true, silent = true, desc = "Move to left while in insert mode" })
+-- vim.keymap.set("i", "<C-j>", "<Down>", { noremap = true, silent = true, desc = "Move to left while in insert mode" })
+-- vim.keymap.set("i", "<C-k>", "<Up>", { noremap = true, silent = true, desc = "Move to left while in insert mode" })
+-- vim.keymap.set("i", "<C-l>", "<Right>", { noremap = true, silent = true, desc = "Move to left while in insert mode" })
 
 -- move line up and down in normal mode
 vim.keymap.set("n", "<S-k>", "ddkP", { noremap = true, silent = true, desc = "Move line up in normal mode." })

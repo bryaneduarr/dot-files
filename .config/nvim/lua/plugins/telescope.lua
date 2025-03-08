@@ -45,8 +45,8 @@ return {
         file_ignore_patterns = get_file_ignore_patterns(), -- Dynamically set ignore patterns
         mappings = {
           i = {
-            ["<C-k>"] = actions.move_selection_previous, -- move to prev result
-            ["<C-j>"] = actions.move_selection_next,     -- move to next result
+            -- ["<C-k>"] = actions.move_selection_previous, -- move to prev result
+            -- ["<C-j>"] = actions.move_selection_next, -- move to next result
             ["<c-d>"] = actions.delete_buffer,
           },
           n = {

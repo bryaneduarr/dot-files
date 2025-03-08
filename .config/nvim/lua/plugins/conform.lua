@@ -6,25 +6,27 @@ return {
 
     conform.setup({
       formatters_by_ft = {
-        javascript = { "prettier", "eslint_d" },
-        typescript = { "prettier", "eslint_d" },
-        javascriptreact = { "prettier", "eslint_d" },
-        typescriptreact = { "prettier", "eslint_d" },
-        svelte = { "prettier" },
-        css = { "prettier" },
-        html = { "prettier" },
-        json = { "prettier" },
-        yaml = { "prettier" },
-        markdown = { "prettier" },
-        graphql = { "prettier" },
-        liquid = { "prettier" },
+        javascript = { "prettierd", "eslint_d" },
+        typescript = { "prettierd", "eslint_d" },
+        javascriptreact = { "prettierd", "eslint_d" },
+        typescriptreact = { "prettierd", "eslint_d" },
+        svelte = { "prettierd" },
+        css = { "prettierd" },
+        html = { "prettierd" },
+        json = { "prettierd" },
+        yaml = { "prettierd" },
+        markdown = { "prettierd" },
+        graphql = { "prettierd" },
+        liquid = { "prettierd" },
         lua = { "stylua" },
         python = { "isort", "black" },
       },
       format_on_save = {
         lsp_fallback = true,
-        async = false,
         timeout_ms = 1000,
+      },
+      format_after_save = {
+        lsp_format = "first",
       },
     })
 

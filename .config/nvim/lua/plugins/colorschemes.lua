@@ -23,6 +23,9 @@ return {
     config = function()
       require("oldworld").setup({
         variant = "oled",
+        integrations = {
+          telescope = false,
+        }
       })
       vim.cmd.colorscheme("oldworld")
     end,
