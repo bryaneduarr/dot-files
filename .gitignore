@@ -9,6 +9,8 @@ notes/
 .config/nextjs-nodejs/
 .config/turborepo/
 .config/configstore/
+.config/nvim/folds
+.config/nvim/spell
 
 # Default config folders
 .aws
@@ -18,6 +20,7 @@ notes/
 .codeium/
 .docker/
 .dotnet/
+.gitconfig
 .landscape/
 .lesshst
 last
@@ -28,6 +31,7 @@ last
 .tmux/
 .vscode-remote-containers/
 .vscode-server/
+.vscode-server-insiders/
 .bash_logout
 .bashrc
 .gitignore
@@ -36,7 +40,11 @@ last
 .viminfo
 .wget-hsts
 
-# For NeoVim
+# History
+.bash_history
+.config/nushell/history.txt
+
+# For Neovim
 .env
 lazy-lock.json
 lazyvim.json
