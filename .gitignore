@@ -11,6 +11,7 @@ notes/
 .config/configstore/
 .config/nvim/folds
 .config/nvim/spell
+.config/github-copilot/
 
 # Default config folders
 .aws
