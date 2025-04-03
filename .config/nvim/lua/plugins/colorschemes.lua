@@ -30,13 +30,4 @@ return {
       vim.cmd.colorscheme("oldworld")
     end,
   },
-  {
-    "dasupradyumna/midnight.nvim",
-    name = "midnight",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      -- vim.cmd.colorscheme("catppuccin-mocha")
-    end,
-  },
 }
