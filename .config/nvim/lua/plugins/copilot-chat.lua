@@ -19,72 +19,55 @@ local prompts = {
   Concise = "Please rewrite the following text to make it more concise.",
 }
 
+local keymaps = {
+  -- Use tab for completion
+  complete = {
+    detail = "Use @<Tab> or /<Tab> for options.",
+    insert = "<Tab>",
+  },
+  -- Close the chat
+  close = {
+    normal = "q",
+    insert = "<C-c>",
+  },
+  -- Reset the chat buffer
+  reset = {
+    normal = "<C-x>",
+    insert = "<C-x>",
+  },
+  -- Submit the prompt to Copilot
+  submit_prompt = {
+    normal = "<CR>",
+    insert = "<C-CR>",
+  },
+  -- Accept the diff
+  accept_diff = {
+    normal = "<C-y>",
+    insert = "<C-y>",
+  },
+  -- Show help
+  show_help = {
+    normal = "g?",
+  },
+}
+
 return {
   { import = "plugins.copilot" },
-  {
-    "folke/which-key.nvim",
-    optional = true,
-    opts = {
-      spec = {
-        { "<leader>z", group = "ai" },
-        { "<leader>gm", group = "Copilot Chat" },
-      },
-    },
-  },
-  {
-    "MeanderingProgrammer/render-markdown.nvim",
-    optional = true,
-    opts = {
-      file_types = { "markdown", "copilot-chat" },
-    },
-    ft = { "markdown", "copilot-chat" },
-  },
   {
     dir = IS_DEV and "~/Projects/research/CopilotChat.nvim" or nil,
     "CopilotC-Nvim/CopilotChat.nvim",
     branch = "main",
-    -- version = "v3.3.0", -- Use a specific version to prevent breaking changes
     dependencies = {
-      { "nvim-telescope/telescope.nvim" }, -- Use telescope for help actions
+      { "nvim-telescope/telescope.nvim" },
       { "nvim-lua/plenary.nvim" },
     },
     opts = {
-      question_header = "## User ",
+      question_header = "## bryaneduarr ",
       answer_header = "## Copilot ",
       error_header = "## Error ",
       prompts = prompts,
       model = "claude-3.7-sonnet",
-      mappings = {
-        -- Use tab for completion
-        complete = {
-          detail = "Use @<Tab> or /<Tab> for options.",
-          insert = "<Tab>",
-        },
-        -- Close the chat
-        close = {
-          normal = "q",
-          insert = "<C-c>",
-        },
-        -- Reset the chat buffer
-        reset = {
-          normal = "<C-x>",
-          insert = "<C-x>",
-        },
-        -- Submit the prompt to Copilot
-        submit_prompt = {
-          normal = "<CR>",
-          insert = "<C-CR>",
-        },
-        -- Accept the diff
-        accept_diff = {
-          normal = "<C-y>",
-          insert = "<C-y>",
-        },
-        -- Show help
-        show_help = {
-          normal = "g?",
-        },
-      },
+      mappings = keymaps,
     },
     config = function(_, opts)
       local chat = require("CopilotChat")

@@ -7,10 +7,11 @@ return {
         require("which-key").show({ global = false })
       end,
     },
-    {
-      -- Define a group for Obsidian-related commands
-      "<leader>o",
-      group = "Obsidian",
+  },
+  opts = {
+    spec = {
+      { "<leader>z", group = "ai" },
+      { "<leader>gm", group = "Copilot Chat" },
     },
   },
 }
