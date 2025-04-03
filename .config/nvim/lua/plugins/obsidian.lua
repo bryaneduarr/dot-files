@@ -1,7 +1,7 @@
 require("env-loader").load_env()
 
 return {
-  "epwalsh/obsidian.nvim",
+  "obsidian-nvim/obsidian.nvim",
   version = "*",
   ft = "markdown",
   dependencies = {
@@ -16,6 +16,10 @@ return {
     },
     templates = {
       folder = "templates",
+    },
+    completion = {
+      nvim_cmp = false,
+      blink = true,
     },
   },
 }
