@@ -19,11 +19,13 @@
 
 $env.PATH = (
   $env.PATH
-  | prepend '/home/bryan/.nvm/versions/node/v23.8.0/bin'
+  | prepend '/home/bryan/.nvm/versions/node/v23.11.0/bin/'
   | prepend '/home/linuxbrew/.linuxbrew/bin'
   | prepend '/home/linuxbrew/.linuxbrew/sbin'
 )
 
+
+$env.NVM_DIR = $"($env.HOME)/.nvm"
 
 $env.EDITOR = "nvim"
 

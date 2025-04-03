@@ -3,6 +3,9 @@ workspace/
 environments/
 notes/
 
+# Profile
+.profile
+
 # .config files
 .config/.wrangler/
 .config/simple-update-notifier/
