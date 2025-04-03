@@ -22,7 +22,7 @@ return {
     name = "oldworld",
     config = function()
       require("oldworld").setup({
-        variant = "default",
+        variant = "cooler", -- default, cooloer, oled
         integrations = {
           telescope = false,
         },

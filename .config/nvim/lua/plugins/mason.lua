@@ -28,6 +28,7 @@ return {
     })
     mason_tool_installer.setup({
       ensure_installed = {
+        "prettierd",
         "prettier",
         "stylua",
         "isort",
