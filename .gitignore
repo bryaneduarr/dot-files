@@ -42,7 +42,13 @@ last
 .motd_shown
 .node_repl_history
 .viminfo
+.vim
 .wget-hsts
+
+# General
+Code/
+create-next-app-nodejs/
+payload-nodejs/
 
 # History
 .bash_history
