@@ -24,6 +24,8 @@ return {
     local function get_file_ignore_patterns()
       local base_patterns = {
         "package%-lock%.json",
+        "pnpm%-lock%.yaml",
+        "bun.lock",
         "%.obsidian.vimrc",
         "node_modules/",
         "%.smart%-env/",
@@ -45,8 +47,6 @@ return {
         file_ignore_patterns = get_file_ignore_patterns(), -- Dynamically set ignore patterns
         mappings = {
           i = {
-            -- ["<C-k>"] = actions.move_selection_previous, -- move to prev result
-            -- ["<C-j>"] = actions.move_selection_next, -- move to next result
             ["<c-d>"] = actions.delete_buffer,
           },
           n = {

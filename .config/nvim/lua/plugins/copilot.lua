@@ -7,6 +7,7 @@ return {
       ["TelescopePrompt"] = false,
       [".md"] = false,
       ["markdown"] = false,
+      ["avante"] = false,
     }
 
     -- Set to true to assume that copilot is already mapped
@@ -22,7 +23,7 @@ return {
     keymap("i", "<C-y>", 'copilot#Accept("\\<CR>")', { expr = true, replace_keycodes = false })
 
     -- Set tab to accept line
-    keymap("i", "tab", "<Plug>(copilot-accept-line)", opts)
+    keymap({ "i", "n" }, "<Tab>", "<Plug>(copilot-accept-line)", opts)
 
     -- Set <C-j> to next suggestion, <C-k> to previous suggestion, <C-l> to suggest
     keymap("i", "<C-j>", "<Plug>(copilot-next)", opts)

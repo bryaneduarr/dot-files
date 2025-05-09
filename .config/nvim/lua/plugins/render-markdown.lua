@@ -7,7 +7,7 @@ return {
     bullet = {
       right_pad = 1,
     },
-    file_types = { "markdown", "copilot-chat" },
-    ft = { "markdown", "copilot-chat" },
+    file_types = { "markdown", "copilot-chat", "Avante" },
+    ft = { "markdown", "copilot-chat", "Avante" },
   },
 }

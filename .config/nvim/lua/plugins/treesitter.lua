@@ -4,6 +4,7 @@ return {
   build = ":TSUpdate",
   dependencies = {
     "windwp/nvim-ts-autotag",
+    "nvim-treesitter/nvim-treesitter-textobjects",
   },
   config = function()
     local treesitter = require("nvim-treesitter.configs")
@@ -16,6 +17,11 @@ return {
       highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,
+        custom_captures = {
+          ["variable.parameter"] = "TSParameter",
+          ["variable.builtin"] = "TSVariableBuiltin",
+          ["variable.other"] = "TSVariable",
+        },
       },
       indent = { enable = true },
       fold = { enable = true },

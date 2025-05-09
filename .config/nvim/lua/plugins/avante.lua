@@ -16,6 +16,7 @@ return {
       auto_set_keymaps = true,
       auto_apply_diff_after_generation = false,
       support_paste_from_clipboard = false,
+      enable_token_counting = false,
     },
     mappings = {
       --- @class AvanteConflictMappings
@@ -56,20 +57,22 @@ return {
       wrap = true, -- similar to vim.o.wrap
       width = 30, -- default % based on available width
       sidebar_header = {
-        enabled = false, -- true, false to enable/disable the header
+        enabled = true, -- true, false to enable/disable the header
         align = "center", -- left, center, right for title
-        rounded = false,
+        rounded = true,
       },
       input = {
-        prefix = "> ",
+        prefix = "",
         height = 8, -- Height of the input window in vertical layout
       },
       edit = {
         start_insert = true, -- Start insert mode when opening the edit window
+        border = "rounded",
       },
       ask = {
         floating = false, -- Open the 'AvanteAsk' prompt in a floating window
         start_insert = true, -- Start insert mode when opening the ask window
+        border = "rounded",
         ---@type "ours" | "theirs"
         focus_on_apply = "ours", -- which diff to focus after applying
       },
@@ -119,14 +122,6 @@ return {
           use_absolute_path = true,
         },
       },
-    },
-    {
-      -- Make sure to set this up properly if you have lazy=true
-      "MeanderingProgrammer/render-markdown.nvim",
-      opts = {
-        file_types = { "markdown", "Avante" },
-      },
-      ft = { "markdown", "Avante" },
     },
   },
 }

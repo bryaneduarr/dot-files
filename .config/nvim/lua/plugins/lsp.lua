@@ -16,6 +16,34 @@ return {
     -- for conciseness
     local keymap = vim.keymap
 
+    -- Configure diagnostics display
+    vim.diagnostic.config({
+      virtual_text = true, -- Show diagnostic messages beside the line
+      signs = true, -- Show signs in the sign column
+      underline = true, -- Underline text with issues
+      update_in_insert = false, -- Don't update diagnostics in insert mode
+      severity_sort = true, -- Sort diagnostics by severity
+      float = {
+        border = "rounded",
+        source = "always",
+        header = "",
+        prefix = "",
+      },
+    })
+
+    -- Automatically show line diagnostics in hover window when cursor holds
+    vim.o.updatetime = 250 -- Faster update time for better UX
+    vim.api.nvim_create_autocmd("CursorHold", {
+      buffer = bufnr,
+      callback = function()
+        vim.diagnostic.open_float(nil, {
+          focusable = false,
+          close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+          scope = "cursor",
+        })
+      end,
+    })
+
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("UserLspConfig", {}),
       callback = function(ev)
@@ -51,11 +79,11 @@ return {
         opts.desc = "Show line diagnostics"
         keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
 
-        -- opts.desc = "Go to previous diagnostic"
-        -- keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
-        --
-        -- opts.desc = "Go to next diagnostic"
-        -- keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
+        opts.desc = "Go to previous diagnostic"
+        keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
+
+        opts.desc = "Go to next diagnostic"
+        keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
 
         opts.desc = "Show documentation for what is under cursor"
         keymap.set("n", "M", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor

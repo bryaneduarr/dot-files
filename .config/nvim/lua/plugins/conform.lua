@@ -20,6 +20,8 @@ return {
         liquid = { "prettierd" },
         lua = { "stylua" },
         python = { "isort", "black" },
+        -- For filetypes without a formatter:
+        ["_"] = { "trim_whitespace", "trim_newlines" },
       },
       format_on_save = {
         lsp_fallback = true,
@@ -36,6 +38,7 @@ return {
         async = false,
         timeout_ms = 1000,
       })
+      vim.g.autoformat = true
     end, { desc = "Format file or range (in visual mode)" })
   end,
 }

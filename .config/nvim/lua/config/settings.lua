@@ -1,89 +1,48 @@
-local o = vim.opt
+-- Display absolute line numbers in the left margin.
+vim.opt.number = true
 
-o.number = true
-o.relativenumber = true
-o.syntax = "on"
-o.autoindent = true
-o.cursorline = true
-o.expandtab = true
-o.shiftwidth = 2
-o.tabstop = 2
-o.encoding = "UTF-8"
-o.splitright = true
-o.splitbelow = true
-o.termguicolors = true
+-- Enable relative line numbering for easier navigation (shows distance from current line).
+vim.opt.relativenumber = true
 
--- Change identation tab spaces
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
+-- Enable syntax highlighting for better code readability.
+vim.opt.syntax = "on"
 
--- Cursor line
+-- Automatically indent new lines based on the previous line's indentation.
+vim.opt.autoindent = true
+
+-- Highlight the line the cursor is currently on for better visibility.
 vim.opt.cursorline = true
 
--- Spelling
+-- Set the number of spaces for each level of indentation when using >> or <<.
+vim.opt.shiftwidth = 2
+
+-- Set the number of spaces that a tab character represents.
+vim.opt.tabstop = 2
+
+-- Set the character encoding used inside Neovim to UTF-8 (supports international characters).
+vim.opt.encoding = "UTF-8"
+
+-- Enable true color support for terminals that support it (better color rendering).
+vim.opt.termguicolors = true
+
+-- Enable spell checking functionality, automatically underlines misspelled words as you type.
 vim.opt.spell = true
+
+-- Set spell checking languages to Spanish and English, Neovim will use dictionaries for both languages to check spelling.
 vim.opt.spelllang = { "es", "en" }
 
-vim.opt.viewoptions:append("folds")
-vim.opt.viewdir = os.getenv("HOME") .. "/.config/nvim/folds"
+-- Hide Netwr banner (the message that appears when you open a directory).
+vim.g.netrw_banner = 0
 
-local view_dir = vim.fn.expand(vim.opt.viewdir:get())
-if vim.fn.isdirectory(view_dir) == 0 then
-  vim.fn.mkdir(view_dir, "p")
-end
+-- Keep the current directory when opening a file.
+vim.g.netrw_keepdir = 0
 
-vim.api.nvim_create_autocmd({ "BufWinLeave" }, {
-  pattern = { "*.md", "*.markdown" },
-  desc = "Save view folds when leaving markdown buffer.",
-  command = "mkview",
-})
+-- Enable Netwr to open files in a preview window.
+vim.g.netrw_preview = 1
 
-vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
-  pattern = { "*.md", "*.markdown" },
-  desc = "Load view folds when entering markdown buffer.",
-  command = "silent! loadview",
-})
+-- Save undo history.
+vim.o.undofile = true
 
--- Enable Tree-sitter-based folding
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
--- Set the default fold level
-vim.opt.foldlevel = 99
-vim.opt.foldenable = true
-
--- Netrw
--- vim.g.netrw_banner = 0
--- vim.g.netrw_keepdir = 0
--- vim.g.netrw_preview = 1
-
--- Function to show VCS status git signs.
-_G.vcs_status = function()
-  local git_info = vim.b.gitsigns_status_dict
-  if not git_info or git_info.head == "" then
-    return ""
-  end
-  local added = git_info.added and ("+" .. git_info.added .. " ") or ""
-  local changed = git_info.changed and ("~" .. git_info.changed .. " ") or ""
-  local removed = git_info.removed and ("-" .. git_info.removed .. " ") or ""
-  if git_info.added == 0 then
-    added = ""
-  end
-  if git_info.changed == 0 then
-    changed = ""
-  end
-  if git_info.removed == 0 then
-    removed = ""
-  end
-  return table.concat({
-    "",
-    added,
-    changed,
-    removed,
-    "",
-    git_info.head,
-  })
-end
-
--- Status line
-vim.opt.statusline = "%f %h%m%r%= %{v:lua.vcs_status()} %l:%c"
+-- Show whitespace.
+vim.opt.list = true
+vim.opt.listchars = { space = "⋅", trail = "⋅", tab = "  ↦" }
